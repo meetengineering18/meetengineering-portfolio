@@ -1,5 +1,7 @@
 const AboutSection = () => {
+  
   return (
+    
     <section className="container mx-auto px-4 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
@@ -33,12 +35,19 @@ const AboutSection = () => {
   )
 }
 
-const StatCard = ({ title, value }) => (
+
+type StatCardProps = {
+  title: string;
+  value: string | number;
+};
+
+const StatCard = ({ title, value }: StatCardProps) => (
   <div className="w-full h-full bg-white dark:bg-slate-900 rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center">
     <div className="text-4xl font-extrabold text-blue-600 mb-2">{value}</div>
     <div className="text-gray-600 dark:text-gray-400 uppercase tracking-widest">{title}</div>
   </div>
-)
+);
+
 
 
 export default AboutSection;
