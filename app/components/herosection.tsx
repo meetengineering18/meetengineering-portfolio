@@ -42,7 +42,7 @@ const Hero = () => {
         }`}
       />
 
-      <div className="container relative z-10 mx-auto px-4 h-full flex items-center">
+      <div className="container relative z-10 mx-auto px-19 h-full flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full h-full"> {/* full height grid */}
           
           {/* Left Side - Company Information */}
@@ -50,7 +50,7 @@ const Hero = () => {
             <div>
               <h1 className="font-bold tracking-tighter leading-tight text-5xl sm:text-5xl md:text-6xl lg:text-7xl">
                 <span className="text-bold text-blue-600 text-6xl block">MEET</span>
-                <span className="text-black-800 dark:text-balck-100 text-6xl ">ENGINEERING</span>
+                <span className="text-black-800 dark:text-black-100 text-6xl ">ENGINEERING</span>
               </h1>
               <p className="mt-4 text-xl font-semibold uppercase tracking-wider text-muted-foreground">
                 MFG. OF PRECISION ENGINEERING PARTS OF STEEL METAL
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>Gundlav, Valsad – Trusted since 20XX</span>
+                <span>Gundlav, Valsad – Trusted since 2004</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-primary" />

@@ -1,23 +1,32 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
-import { LampContainer } from "./lamp"
+import { Carousel } from "./carousel";
 
 export function ProductGallery() {
+  const slideData = [
+    {
+      title: "Precision Gear Assembly",
+      button: "View More",
+      src: "/images/gear-transparent.png",
+    },
+    {
+      title: "Custom CNC Bracket",
+      button: "View More",
+      src: "/images/cnc-bracket-transparent.png",
+    },
+  ];
+
   return (
-    <LampContainer>
-      <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="mt-8 "
-      >
-        Build lamps <br /> the right way
-      </motion.h1>
-    </LampContainer>
+    <div className="w-full min-h-screen bg-white flex flex-col items-center justify-center px-4 py-16">
+      <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-4 text-center drop-shadow-sm">
+        Product Gallery
+      </h1>
+      <p className="text-center text-lg text-gray-700 max-w-2xl mb-10 font-medium">
+        Custom-manufactured metal components and complete solutions tailored precisely to your unique requirements.
+      </p>
+                  <div className="relative overflow-hidden w-full h-full py-10">
+      <Carousel slides={slideData} />
+    </div>
+    </div>
   );
 }
