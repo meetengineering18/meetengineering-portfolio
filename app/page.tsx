@@ -7,6 +7,7 @@ import { ProductGallery } from './components/productGallery'
 import Dock from './components/connection';
 import { Footer } from './components/footer';
 import { FadeInWhenVisible } from './components/fade';
+import { OurServices } from './components/ourservices';
 
 import { FaWhatsapp, FaPhone, FaRegCommentDots } from "react-icons/fa"; // use quote/chat icon
 
@@ -59,6 +60,13 @@ export default function Home() {
       <FadeInWhenVisible direction="up">
         <ProductGallery />
       </FadeInWhenVisible>
+
+<section id="services">
+  <FadeInWhenVisible direction="up">
+  <OurServices />
+  </FadeInWhenVisible>
+</section>
+
 
       <Footer />
       <Dock items={items} />

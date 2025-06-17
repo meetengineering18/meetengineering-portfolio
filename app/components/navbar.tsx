@@ -52,7 +52,7 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            href="/gallery"
+            href="/whyus"
             className={`uppercase text-sm tracking-wide transition duration-300 ${
               pathname === '/gallery' ? 'text-blue-500 font-bold' : 'text-black hover:text-blue-200'
             }`}
@@ -106,7 +106,7 @@ const Navbar = () => {
       why us
     </Link>
     <Link
-      href="/reservation"
+      href="/contact"
       className={`text-black uppercase text-sm tracking-wide py-2 ${
         pathname === '/reservation' ? 'text-blue-500 font-bold' : 'hover:text-blue-200'
       }`}

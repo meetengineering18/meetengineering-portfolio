@@ -3,9 +3,21 @@
 import { useTheme } from 'next-themes'
 import { MapPin, Phone, Mail } from 'lucide-react'
 import { Carousel } from './carousel';
+import { useCallback } from "react";
+import Link from 'next/link';
+
+
+
 
 
 const Hero = () => {
+
+  const scrollToServices = useCallback(() => {
+  const section = document.getElementById("services");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}, []);
   const { theme } = useTheme()
 
 
@@ -42,16 +54,18 @@ const Hero = () => {
         }`}
       />
 
-      <div className="container relative z-10 mx-auto px-19 h-full flex items-center">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 py-5 md:px-10 lg:px-19 xl:px-20 h-full flex items-center ">
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full h-full"> {/* full height grid */}
           
           {/* Left Side - Company Information */}
           <div className="flex flex-col space-y-5 justify-center h-full animate-slideInFromLeft">
             <div>
-              <h1 className="font-bold tracking-tighter leading-tight text-5xl sm:text-5xl md:text-6xl lg:text-7xl">
-                <span className="text-bold text-blue-600 text-6xl block">MEET</span>
-                <span className="text-black-800 dark:text-black-100 text-6xl ">ENGINEERING</span>
-              </h1>
+<h1 className="font-bold tracking-tighter leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+  <span className="text-blue-600 block">MEET</span>
+  <span className="text-black-800 dark:text-black-100">ENGINEERING</span>
+</h1>
+
               <p className="mt-4 text-xl font-semibold uppercase tracking-wider text-muted-foreground">
                 MFG. OF PRECISION ENGINEERING PARTS OF STEEL METAL
               </p>
@@ -80,7 +94,7 @@ const Hero = () => {
 
 
             <div className="flex flex-wrap gap-4 pt-4">
-<button className="relative inline-flex h-14 w-auto overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring- focus:ring-slate-400 focus:ring-offset-4 focus:ring-offset-slate-50">
+<button onClick={scrollToServices} className="relative inline-flex h-14 w-auto overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring- focus:ring-slate-400 focus:ring-offset-4 focus:ring-offset-slate-50">
   {/* Rotating gradient background */}
   <span className="absolute inset-[0.6] rounded-full animate-spin-slow [background:conic-gradient(from_0deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
@@ -90,9 +104,14 @@ const Hero = () => {
   </span>
 </button>
 
-<button className="shadow-[0_0_0_0.5px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
-  Get Quote
-</button>
+
+
+
+    <Link href="/contact">
+      <button className="shadow-[0_0_0_0.5px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+        Get Quote
+      </button>
+    </Link>
             </div>
           </div>
 

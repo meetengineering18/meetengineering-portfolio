@@ -2,7 +2,8 @@ const AboutSection = () => {
   
   return (
     
-    <section className="container mx-auto px-19 py-16">
+    <section className="container relative z-10 mx-auto px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28 h-full flex space-between">
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
         {/* Left side: About Card */}
