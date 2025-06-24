@@ -2,9 +2,9 @@ const AboutSection = () => {
   
   return (
     
-    <section className="container relative z-10 mx-auto px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28 h-full flex space-between">
+    <section className="container relative z-10 mx-auto px-4 sm:px-6 md:px-10 lg:px-20 xl:px-20 h-full  flex justify-between ">
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
 
         {/* Left side: About Card */}
         <div className="max-w-lg">
