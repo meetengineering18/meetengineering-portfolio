@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 export const GetAQuoteForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone:"",
     company: "",
-    message: "",
+    comment: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -16,8 +18,11 @@ export const GetAQuoteForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here, integrate with backend or email API
-    alert("Quote request submitted!");
+    axios.post("/api/inquiry", formData)
+      .then((response) => {
+        alert("Quote request submitted!");
+      }).catch((error) => {
+        console.error("Error submitting form:", error);});
   };
 
   return (
@@ -40,6 +45,20 @@ export const GetAQuoteForm = () => {
           onChange={handleChange}
           required
           className="w-full border border-gray-300 rounded px-4 py-2 dark:bg-slate-700 dark:text-white"
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium mb-1">Phone No</label>
+        <input
+          type="text"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className="w-full border border-gray-300 rounded px-4 py-2 dark:bg-slate-700 dark:text-white"
+          maxLength={10}
+          pattern="[0-9]{10}"
         />
       </div>
 
@@ -69,9 +88,9 @@ export const GetAQuoteForm = () => {
       <div>
         <label className="block text-sm font-medium mb-1">Message / Requirements</label>
         <textarea
-          name="message"
+          name="comment"
           rows={4}
-          value={formData.message}
+          value={formData.comment}
           onChange={handleChange}
           required
           className="w-full border border-gray-300 rounded px-4 py-2 dark:bg-slate-700 dark:text-white"
