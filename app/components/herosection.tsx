@@ -28,6 +28,14 @@ const Hero = () => {
 
       src: "/box-round-strip.png",
     },
+        {
+
+      src: "/ms-plate.png",
+    },
+        {
+
+      src: "/nails.png",
+    },
     {
 
       src: "/250mm-hinges.png",
@@ -51,6 +59,18 @@ const Hero = () => {
             {
 
       src: "/ring-insert.png",
+    },
+                    {
+
+      src: "/door-lock-1.png",
+    },
+                {
+
+      src: "/bendplate.png",
+    },
+                {
+
+      src: "/door-lock.png",
     },
   ];
 

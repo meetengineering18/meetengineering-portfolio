@@ -5,14 +5,44 @@ import { Carousel } from "./carousel";
 export function ProductGallery() {
   const slideData = [
     {
-      title: "Precision Gear Assembly",
-      button: "View More",
-      src: "/images/gear-transparent.png",
+
+      src: "/hingess.png",
     },
     {
-      title: "Custom CNC Bracket",
-      button: "View More",
-      src: "/images/cnc-bracket-transparent.png",
+
+      src: "/ring-insert.png",
+    },
+        {
+
+      src: "/door-lock-1.png",
+    },
+    {
+
+      src: "/door-lock.png",
+    },
+        {
+
+      src: "/box-strip.png",
+    },
+    {
+
+      src: "/ringinsert small.png",
+    },
+        {
+
+      src: "/door-closer.png",
+    },
+        {
+
+      src: "/ms-plate.png",
+    },
+        {
+
+      src: "/nails.png",
+    },
+        {
+
+      src: "/250mm-hinges.png",
     },
   ];
 
