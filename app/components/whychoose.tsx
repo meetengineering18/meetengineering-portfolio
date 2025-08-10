@@ -55,7 +55,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-gray-50 dark:bg-slate-900 py-20">
+    <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">Why Choose Us</h2>
 
@@ -66,12 +66,11 @@ const WhyChooseUs = () => {
             {reasons.slice(0, 4).map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transition-transform transform hover:scale-[1.02] duration-300
-"
+                className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition transition-transform transform hover:scale-[1.02] duration-300"
               >
                 <div className="mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -81,12 +80,11 @@ const WhyChooseUs = () => {
             {reasons.slice(4).map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] flex flex-col items-center justify-center text-center hover:shadow-xl transition transition-transform transform hover:scale-[1.02] duration-300
-"
+                className="bg-white rounded-xl shadow-md p-6 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] flex flex-col items-center justify-center text-center hover:shadow-xl transition transition-transform transform hover:scale-[1.02] duration-300"
               >
                 <div className="mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -97,12 +95,12 @@ const WhyChooseUs = () => {
           {reasons.map((item, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-slate-800 rounded-lg shadow p-4 flex items-start gap-4"
+              className="bg-white rounded-lg shadow p-4 flex items-start gap-4"
             >
               <div>{item.icon}</div>
               <div>
-                <h3 className="text-base font-semibold text-gray-800 dark:text-white mb-1">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">{item.descShort}</p>
+                <h3 className="text-base font-semibold text-gray-800 mb-1">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.descShort}</p>
               </div>
             </div>
           ))}

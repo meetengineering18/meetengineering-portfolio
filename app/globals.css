@@ -5,12 +5,7 @@
   --background: rgb(255, 255, 255);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: rgb(255, 255, 255);
-    --background: rgb(0, 0, 0);
-  }
-}
+
 
 body {
   background: var(--background);
@@ -29,9 +24,4 @@ body {
     linear-gradient(to bottom, rgba(0, 120, 255, 0.05) 1px, transparent 1px);
 }
 
-.grid-pattern-dark {
-  background-size: 50px 50px;
-  background-image: 
-    linear-gradient(to right, rgba(75, 159, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(78, 161, 255, 0.1) 1px, transparent 1px);
-}
+

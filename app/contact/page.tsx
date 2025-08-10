@@ -6,7 +6,7 @@ import { Footer } from '../components/footer';
 
 const Contact = () => {
   return (
-    <main className="bg-gray-50 dark:bg-slate-950 min-h-screen text-gray-800 dark:text-white">
+    <main className="bg-gray-50 min-h-screen text-gray-800">
       <Navbar />
 
       {/* Header */}

@@ -10,6 +10,8 @@ import { FadeInWhenVisible } from './components/fade';
 import { OurServices } from './components/ourservices';
 
 import { FaWhatsapp, FaPhone, FaRegCommentDots } from "react-icons/fa"; // use quote/chat icon
+import { GetAQuoteForm } from './components/GetAQuoteForm';
+import Head from 'next/head';
 
 
 
@@ -45,7 +47,80 @@ const items = [
 
 export default function Home() {
   return (
+    
     <>
+    <Head>
+  <title>Meet Engineering | Stainless Steel & Metal Parts Manufacturer in Gujarat, India</title>
+  
+  <meta
+    name="description"
+    content="Meet Engineering is a leading manufacturer and supplier of precision stainless steel hardware parts including hinges, door closers, and custom metal components. Based in Gujarat, India, we provide high-quality, budget-friendly mass production services to industries across India."
+  />
+  
+  <meta
+    name="keywords"
+    content="
+      hinge manufacturer Gujarat,
+      stainless steel part manufacturer India,
+      custom metal parts manufacturer Valsad,
+      industrial steel components India,
+      door closer supplier Gujarat,
+      metal hardware parts India,
+      mass production steel parts Gujarat
+    "
+  />
+  
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Meet Engineering" />
+  
+  {/* Open Graph / Social Media Tags */}
+  <meta property="og:title" content="Meet Engineering | Stainless Steel & Metal Parts Manufacturer in Gujarat, India" />
+  <meta
+    property="og:description"
+    content="Providing durable and precision-engineered stainless steel hinges, door closers, and custom metal parts for industries across Gujarat and India. Reliable mass production and on-time delivery."
+  />
+  <meta property="og:type" content="website" />
+  
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet Engineering | Stainless Steel & Metal Parts Manufacturer in Gujarat, India" />
+  <meta
+    name="twitter:description"
+    content="Durable, custom stainless steel and metal hardware parts manufactured in Gujarat, India. Serving industrial clients with quality and timely delivery."
+  />
+  
+  {/* Local Business Schema JSON-LD (Google Structured Data) */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: `
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Meet Engineering",
+        "image": "https://yourwebsite.com/MEET.png",
+        "telephone": "+91 98258 69799",
+        "email": "meetengineering18@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gundlav, Valsad",
+          "addressLocality": "Valsad",
+          "addressRegion": "Gujarat",
+          "postalCode": "396001",
+          "addressCountry": "IN"
+        },
+        "url": "https://yourwebsite.com",
+        "sameAs": [
+          "https://www.facebook.com/yourpage",
+          "https://www.linkedin.com/company/yourcompany"
+        ],
+        "description": "Manufacturer of stainless steel hinges, door closers, and custom metal parts in Gujarat, India."
+      }
+      `
+    }}
+  />
+</Head>
+
       <Navbar />
       <Hero />
 
@@ -66,6 +141,9 @@ export default function Home() {
   <OurServices />
   </FadeInWhenVisible>
 </section>
+<div className='container mx-auto px-4 py-16 max-w-4xl'>
+<GetAQuoteForm/>
+</div>
 
 
       <Footer />

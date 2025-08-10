@@ -10,7 +10,7 @@ export function Footer() {
           {/* Logo and Contact Info */}
           <div className="space-y-4">
             <Image
-              src="/logo.png"
+              src="/MEET.png"
               alt="Meet engineering"
               width={220}
               height={60}
@@ -76,10 +76,10 @@ export function Footer() {
               <Link href="/about" className="hover:underline">
                 About
               </Link>
-              <Link href="/gallery" className="hover:underline">
+              <Link href="/whyus" className="hover:underline">
                 Why Choose Us
               </Link>
-              <Link href="/reservation" className="hover:underline">
+              <Link href="/contact" className="hover:underline">
                 Contact
               </Link>
             </nav>
@@ -90,16 +90,17 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-2">Location</h3>
             <div className="w-full h-64 mt-4 relative group rounded-md overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.870710040295!2d73.0281102!3d20.7288678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ed1aac0027a3%3Aa2d6c4b636ce3d7f!2sChhaya%20Party%20Plot!5e0!3m2!1sen!2sin!4v1716055539421!5m2!1sen!2sin"
-                width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.099759341364!2d72.97303107501986!3d20.624790180925416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0e90040cb07d5%3A0xe1355f6000276b9e!2smeet%20engineering!5e0!3m2!1sen!2sin!4v1754810355755!5m2!1sen!2sin"
                 height="100%"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="border-0 pointer-events-none"
               ></iframe>
+
+              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.099759341364!2d72.97303107501986!3d20.624790180925416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0e90040cb07d5%3A0xe1355f6000276b9e!2smeet%20engineering!5e0!3m2!1sen!2sin!4v1754810355755!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
               <a
-                href="https://www.google.com/maps/place/Chhaya+Party+Plot/@20.7288678,73.0306851,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0ed1aac0027a3:0xa2d6c4b636ce3d7f!8m2!3d20.7288678!4d73.0306851!16s%2Fg%2F11v0y548kr?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/meet+engineering/@20.6247902,72.9730311,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0e90040cb07d5:0xe1355f6000276b9e!8m2!3d20.6247902!4d72.975606!16s%2Fg%2F11md3ylyfy?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute inset-0 z-10"
