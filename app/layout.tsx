@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "next-themes"; // ✅ Import ThemeProvider
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,8 +12,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
 
 export const metadata: Metadata = {
   title: "Meet Engineering | Stainless Steel Hinges & Custom Metal Parts Manufacturer in Gujarat, India",
@@ -34,7 +32,10 @@ export const metadata: Metadata = {
     "industrial hinges supplier",
     "manufacturing stainless steel parts",
     "metal parts supplier Valsad",
-    "door hardware manufacturer Gujarat"
+    "door hardware manufacturer Gujarat",
+    "hinge manufacturer India",
+    "custom hinges",
+    "heavy duty hinges manufacturer"
   ],
   authors: [{ name: "Meet Engineering" }],
   robots: "index, follow",
@@ -45,37 +46,83 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "Meet Engineering",
-    url: "https://yourwebsite.com", // Replace with actual URL
-    // Optional images:
-    // images: [{ url: "https://yourwebsite.com/images/meet-engineering-og.jpg", alt: "Meet Engineering Logo" }],
+    url: "https://meetengineering.co", // Change this
   },
   twitter: {
     card: "summary_large_image",
     title: "Meet Engineering | Stainless Steel Hinges & Custom Metal Parts Manufacturer in Gujarat, India",
     description:
       "Durable, custom stainless steel and metal hardware parts manufactured in Gujarat, India. Serving industrial clients with quality and timely delivery.",
-    // image: "https://yourwebsite.com/images/meet-engineering-twitter-card.jpg", // Optional
   },
 };
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Meet Engineering",
+    url: "https://yourwebsite.com", // Change this
+    logo: "https://yourwebsite.com/logo.png", // Change to your logo
+    description:
+      "Manufacturer of stainless steel hinges, door closers, and custom metal parts based in Gujarat, India. Serving industrial clients nationwide.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Your Street, City",
+      addressLocality: "Valsad",
+      addressRegion: "Gujarat",
+      postalCode: "396001",
+      addressCountry: "India"
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-XXXXXXXXXX",
+      contactType: "Sales",
+      areaServed: "IN",
+      availableLanguage: "English"
+    },
+    sameAs: [
+      "https://www.facebook.com/yourpage",
+      "https://www.linkedin.com/company/yourcompany",
+      "https://www.instagram.com/yourpage"
+    ],
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Stainless Steel Hinges",
+          category: "Hinges"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Door Closers",
+          category: "Door Hardware"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Custom Metal Parts",
+          category: "Custom Fabrication"
+        }
+      }
+    ]
+  };
 
-
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"       // ✅ Enables class-based theme switching
-          defaultTheme="system"   // ✅ Uses system preference initially
-          enableSystem            // ✅ Allows dynamic response to system changes
-        >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
       </body>
