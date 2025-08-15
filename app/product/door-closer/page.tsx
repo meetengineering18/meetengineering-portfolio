@@ -24,33 +24,62 @@ const doorCloserImages = [
 export default function DoorCloserPage() {
   return (
     <>
-      <Head>
-        <title>Door Closer Manufacturer | Custom Door Closers in Gujarat</title>
-        <meta
-          name="description"
-          content="Meet Engineering offers premium custom door closers manufactured in Gujarat, India. High-quality, durable door closers for commercial and industrial use."
-        />
-        <meta
-          name="keywords"
-          content="door closer manufacturer, stainless steel door closers, custom door closers, industrial door closers Gujarat, commercial door closers, hardware parts Gujarat"
-        />
-        <meta property="og:title" content="Meet Engineering | Door Closer Manufacturer" />
-        <meta
-          property="og:description"
-          content="Reliable, durable, and custom door closers manufactured to client specifications in Gujarat, India. Serving industries across India."
-        />
-        <meta property="og:url" content="https://yourdomain.com/product/door-closer" />
-        <meta property="og:site_name" content="Meet Engineering" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:type" content="website" />
+<Head>
+  <title>Door Closers Manufacturer | Heavy Duty Commercial Door Solutions</title>
+  <meta
+    name="description"
+    content="Meet Engineering manufactures durable door closers for commercial and industrial buildings. Designed for smooth operation and long-term reliability."
+  />
+  <meta
+    name="keywords"
+    content="door closers, commercial door closer manufacturer, heavy duty door hardware, industrial door closing systems"
+  />
+  <meta property="og:title" content="Meet Engineering | Door Closers Manufacturer" />
+  <meta
+    property="og:description"
+    content="High-quality door closers designed for commercial and industrial use. Reliable performance with smooth door operation."
+  />
+  <meta property="og:url" content="https://www.meetengineering.co/product/door-closers" />
+  <meta property="og:site_name" content="Meet Engineering" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Meet Engineering | Door Closer Manufacturer" />
-        <meta
-          name="twitter:description"
-          content="Premium custom door closers manufacturer based in Gujarat, India. Quality and reliability for industrial and commercial applications."
-        />
-      </Head>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet Engineering | Door Closers Manufacturer" />
+  <meta
+    name="twitter:description"
+    content="Durable door closers for commercial and industrial environments. Built to last with precision engineering."
+  />
+
+  {/* JSON-LD Product Schema */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: "Door Closers",
+        image: ["https://www.meetengineering.co/images/door-closers.jpg"],
+        description:
+          "Durable door closers for industrial and commercial use.",
+        category: "Door Hardware",
+        brand: {
+          "@type": "Brand",
+          name: "Meet Engineering"
+        },
+        offers: {
+          "@type": "Offer",
+          url: "https://www.meetengineering.co/product/door-closers",
+          priceCurrency: "INR",
+          price: "1500.00",
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition"
+        }
+      })
+    }}
+  />
+</Head>
+
 
       <Navbar />
       <main className="bg-gray-50 min-h-screen text-gray-800">

@@ -24,33 +24,61 @@ const customPartsImages = [
 export default function CustomMetalPartsPage() {
   return (
     <>
-      <Head>
-        <title>Custom Metal Parts Manufacturer | Stainless Steel Parts Gujarat</title>
-        <meta
-          name="description"
-          content="Meet Engineering offers fully custom metal parts manufacturing in Gujarat, India. Precision stainless steel and alloy parts tailored for your industrial needs."
-        />
-        <meta
-          name="keywords"
-          content="custom metal parts, stainless steel parts manufacturer, CNC machined parts, industrial metal fabrication Gujarat, custom alloy parts India"
-        />
-        <meta property="og:title" content="Meet Engineering | Custom Metal Parts Manufacturer" />
-        <meta
-          property="og:description"
-          content="High precision custom metal parts manufacturer based in Gujarat, India. Serving automotive, construction, and industrial sectors with reliable fabrication."
-        />
-        <meta property="og:url" content="https://yourdomain.com/product/custom-metal-parts" />
-        <meta property="og:site_name" content="Meet Engineering" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:type" content="website" />
+<Head>
+  <title>Custom Metal Parts Manufacturer | Stainless Steel Parts Gujarat</title>
+  <meta
+    name="description"
+    content="Meet Engineering offers fully custom metal parts manufacturing in Gujarat, India. Precision stainless steel and alloy parts tailored for your industrial needs."
+  />
+  <meta
+    name="keywords"
+    content="custom metal parts, stainless steel parts manufacturer, CNC machined parts, industrial metal fabrication Gujarat, custom alloy parts India"
+  />
+  <meta property="og:title" content="Meet Engineering | Custom Metal Parts Manufacturer" />
+  <meta
+    property="og:description"
+    content="High precision custom metal parts manufacturer based in Gujarat, India. Serving automotive, construction, and industrial sectors with reliable fabrication."
+  />
+  <meta property="og:url" content="https://www.meetengineering.co/product/custom-metal-parts" />
+  <meta property="og:site_name" content="Meet Engineering" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Meet Engineering | Custom Metal Parts Manufacturer" />
-        <meta
-          name="twitter:description"
-          content="Premium custom metal parts manufacturing services in Gujarat, India. Precision-engineered stainless steel and alloy parts for various industries."
-        />
-      </Head>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet Engineering | Custom Metal Parts Manufacturer" />
+  <meta
+    name="twitter:description"
+    content="Premium custom metal parts manufacturing services in Gujarat, India. Precision-engineered stainless steel and alloy parts for various industries."
+  />
+
+  {/* ✅ Add JSON-LD schema here */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: "Custom Metal Parts",
+        image: ["https://www.meetengineering.co/images/custom-metal-parts.jpg"],
+        description:
+          "Custom-designed metal parts manufactured in bulk for industrial clients.",
+        brand: {
+          "@type": "Brand",
+          name: "Meet Engineering"
+        },
+        offers: {
+          "@type": "Offer",
+          url: "https://www.meetengineering.co/product/custom-metal-parts",
+          priceCurrency: "INR",
+          price: "0.00", // If you don't display pricing, keep as "0.00"
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition"
+        }
+      })
+    }}
+  />
+</Head>
+
 
       <Navbar />
       <main className="bg-gray-50 min-h-screen text-gray-800">

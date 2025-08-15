@@ -32,12 +32,60 @@ export default function ProductPage() {
   return (
     <>
       <Head>
-        <title>Meet Engineering | Products</title>
-        <meta
-          name="description"
-          content="Explore Meet Engineering’s range of precision-engineered products including stainless steel hinges, door closers, and custom metal parts."
-        />
-      </Head>
+  <title>Stainless Steel Hinges Manufacturer | Rust-Resistant Door Hardware</title>
+  <meta
+    name="description"
+    content="Meet Engineering manufactures premium stainless steel hinges for doors, gates, and industrial applications. Rust-resistant and built for strength."
+  />
+  <meta
+    name="keywords"
+    content="stainless steel hinges, heavy duty hinges, rust-resistant door hardware, industrial door hinges"
+  />
+  <meta property="og:title" content="Meet Engineering | Stainless Steel Hinges Manufacturer" />
+  <meta
+    property="og:description"
+    content="High-quality stainless steel hinges built for strength and corrosion resistance. Ideal for industrial and commercial use."
+  />
+  <meta property="og:url" content="https://www.meetengineering.co/product/stainless-steel-hinges" />
+  <meta property="og:site_name" content="Meet Engineering" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet Engineering | Stainless Steel Hinges Manufacturer" />
+  <meta
+    name="twitter:description"
+    content="Premium stainless steel hinges for industrial and commercial applications."
+  />
+
+  {/* JSON-LD Product Schema */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: "Stainless Steel Hinges",
+        image: ["https://www.meetengineering.co/images/stainless-steel-hinges.jpg"],
+        description:
+          "Rust-resistant stainless steel hinges for doors and gates.",
+        category: "Hinges",
+        brand: {
+          "@type": "Brand",
+          name: "Meet Engineering"
+        },
+        offers: {
+          "@type": "Offer",
+          url: "https://www.meetengineering.co/product/stainless-steel-hinges",
+          priceCurrency: "INR",
+          price: "250.00",
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition"
+        }
+      })
+    }}
+  />
+</Head>
 
       <Navbar />
 
