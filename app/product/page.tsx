@@ -24,7 +24,7 @@ const products = [
     title: "Custom Metal Parts",
     description:
       "Precision-engineered custom metal parts for all your industrial and manufacturing needs.",
-    href: "/product/custom-metal-parts",
+    href: "/product/custom-parts",
   },
 ];
 

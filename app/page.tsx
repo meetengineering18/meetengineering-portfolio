@@ -29,19 +29,19 @@ const items = [
   { 
     icon: <FaWhatsapp size={18} color="#25D366" />, 
     label: "WhatsApp", 
-    onClick: () => window.open("https://wa.me/917600616660", "_blank") 
+    onClick: () => window.open("https://wa.me/919825869799", "_blank") 
   },
 
   { 
     icon: <FaPhone size={18} color="#34B7F1" />, 
     label: "Call", 
-    onClick: () => copyToClipboard("+91 76006 16660") 
+    onClick: () => copyToClipboard("+91 98258 69799") 
   },
 
   {
     icon: <FaRegCommentDots size={18} color="#f0ad4e" />, // quote/chat symbol
     label: "Get a Quote",
-    onClick: () => window.location.href = "/quote", // redirect to /quote
+    onClick: () => window.location.href = "/contact", // redirect to /quote
   }
 ];
 
