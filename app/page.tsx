@@ -90,31 +90,59 @@ export default function Home() {
   />
   
   {/* Local Business Schema JSON-LD (Google Structured Data) */}
-  <script
+ <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
       __html: `
       {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Meet Engineering",
-        "image": "https://yourwebsite.com/MEET.png",
-        "telephone": "+91 98258 69799",
-        "email": "meetengineering18@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Gundlav, Valsad",
-          "addressLocality": "Valsad",
-          "addressRegion": "Gujarat",
-          "postalCode": "396001",
-          "addressCountry": "IN"
-        },
-        "url": "https://yourwebsite.com",
-        "sameAs": [
-          "https://www.facebook.com/yourpage",
-          "https://www.linkedin.com/company/yourcompany"
-        ],
-        "description": "Manufacturer of stainless steel hinges, door closers, and custom metal parts in Gujarat, India."
+        "@context": "https://schema.org/",
+        "@graph": [
+          {
+            "@type": "Product",
+            "name": "Custom Metal Parts",
+            "category": "Custom Fabrication",
+            "description": "High-quality custom steel parts manufactured in bulk for industrial applications.",
+            "brand": { "@type": "Brand", "name": "Meet Engineering" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://meetengineering.co/custom-metal-parts",
+              "price": "0.00",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Door Closers",
+            "category": "Hardware",
+            "description": "Durable stainless steel door closers for commercial and industrial use.",
+            "brand": { "@type": "Brand", "name": "Meet Engineering" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://meetengineering.co/door-closers",
+              "price": "0.00",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Stainless Steel Hinges",
+            "category": "Hardware",
+            "description": "Precision stainless steel hinges designed for heavy-duty applications.",
+            "brand": { "@type": "Brand", "name": "Meet Engineering" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://meetengineering.co/stainless-steel-hinges",
+              "price": "0.00",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition"
+            }
+          }
+        ]
       }
       `
     }}
